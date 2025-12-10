@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ApplicationProvider } from './contexts/ApplicationContext';
-import Layout from './components/Layout';
+import Layout from './components/layout/Layout';
 import Step1_Reason from './pages/Step1_Reason';
 import Step2_Personal from './pages/Step2_Personal';
 import Step3_Contact from './pages/Step3_Contact';
