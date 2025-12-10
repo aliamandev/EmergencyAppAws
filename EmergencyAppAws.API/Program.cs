@@ -10,8 +10,12 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Add DbContext with Npgsql
+// Add DbContext with Npgsql
+var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING") 
+                       ?? builder.Configuration.GetConnectionString("DefaultConnection");
+
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(connectionString));
 
 // Add CORS
 builder.Services.AddCors(options =>
