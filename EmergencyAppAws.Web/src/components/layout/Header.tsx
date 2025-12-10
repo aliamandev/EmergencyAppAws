@@ -38,6 +38,7 @@ export default function Header() {
                     <div className="flex items-center gap-3">
                         <nav className="hidden md:flex items-center gap-6 mr-4">
                             <a href="#" className="text-sm font-medium text-primary-100 hover:text-white transition-colors">Help</a>
+                            <Link to="/admin" className="text-sm font-medium text-primary-100 hover:text-white transition-colors">Admin</Link>
                         </nav>
                     </div>
                 </div>
